@@ -56,12 +56,15 @@ Make sure to install Node.JS & npm
 ## RestAPI Routes
 
 RestAPI routes are defined here
+
 [GETRoutes](https://github.com/alphabin/simpleAPI/blob/master/server/routes/appRoutes.js)
 
 Routes controller are defined here
+
 [Controllers](https://github.com/alphabin/simpleAPI/blob/master/server/controller/apiController.js)
 
 Helper Class of `NumberConver` does the heavy lifiting for logic
+
 [NumberConverter](https://github.com/alphabin/simpleAPI/blob/master/server/controller/utility/utility.js
 
 ## Run tests
