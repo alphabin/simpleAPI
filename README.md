@@ -65,7 +65,7 @@ Routes controller are defined here
 
 Helper Class of `NumberConver` does the heavy lifiting for logic
 
-[NumberConverter](https://github.com/alphabin/simpleAPI/blob/master/server/controller/utility/utility.js
+[NumberConverter](https://github.com/alphabin/simpleAPI/blob/master/server/controller/utility/utility.js)
 
 ## Run tests
      npm run test
