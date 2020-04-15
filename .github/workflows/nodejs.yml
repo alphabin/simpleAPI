@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -23,7 +23,7 @@ jobs:
     - name: npm install and test
       run: |
         npm install
-        npm test
+        npm run test
       env:
         CI: true
 
@@ -41,8 +41,8 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd ~/simpleApi
+          git stash
           git pull origin master
           npm install
-          pm2 kill
-          pm2 stop
-          pm2 start ./server/index.js simpleApi
+          pm2 stop all
+          pm2 start ./server/index.js --name simpleApi
