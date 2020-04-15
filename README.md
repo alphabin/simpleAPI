@@ -7,7 +7,7 @@ Handles negative numbers
 
 Handles decimals(floats) and intergers
 
-# Important Dev prereq
+# Important Dev Pre-req
 
 Make sure to install Node.JS & npm
 
@@ -141,3 +141,4 @@ Example Response
     {"status":"ok","num_in_english":"one hundred"}
 
 ## CI / CD Pipeline
+
