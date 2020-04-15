@@ -1,4 +1,11 @@
  
+# Limitations
+
+MAX / MIN 999999999999999 
+
+Handles negative numbers
+
+Handles decimals(floats) and intergers
 
 # Important Dev prereq
 
@@ -11,7 +18,75 @@ Make sure to install Node.JS & npm
 ## Run tests
      npm run test
 
+These tests are located in
+    server/tests/apiTest.js
 
+Example Results as such
+
+    > mocha server/tests/apiTest.js
+
+    Example app listening at http://localhost:3000
+
+
+    GET /num_to_english?number=0
+        ✓ Non secure test 
+
+    GET /num_to_english?number=0
+        ✓ Non secure test 
+
+    GET /num_to_english?number=1
+        ✓ Non secure test 
+
+    GET /num_to_english?number=10
+        ✓ Non secure test 
+
+    GET /num_to_english?number=15
+        ✓ Non secure test 
+
+    GET /num_to_english?number=12345678
+        ✓ Non secure test 
+
+    GET /num_to_english?number=
+        ✓ Non secure test 
+
+    GET /num_to_english?number=-15
+        ✓ Non secure test 
+
+    GET /num_to_english?number=-29
+        ✓ Non secure test 
+
+    GET /num_to_english?number=-1000.41
+        ✓ Non secure test 
+
+    GET /num_to_english_secure?number=11
+        ✓ Secure test
+
+    GET /num_to_english_secure?number=21
+        ✓ Secure test
+
+    GET /num_to_english_secure?number=15
+        ✓ Secure test
+
+    GET /num_to_english_secure?number=12345678
+        ✓ Secure test
+
+    GET /num_to_english_secure?number=
+        ✓ Secure test
+
+    GET /num_to_english_secure?number=-11
+        ✓ Secure test
+
+    GET /num_to_english_secure?number=-21
+        ✓ Secure test
+
+    GET /num_to_english_secure?number=-222.31
+        ✓ Secure test
+
+    GET /num_to_english_secure?number=-222.31
+        ✓ Secure test
+
+
+    19 passing (65ms)
 ## Run the app
      npm run start
 

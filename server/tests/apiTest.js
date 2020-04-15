@@ -23,7 +23,7 @@ const ValidTestModel =  [];
 
 //Secure Test
 var ValidTestModelSecure= []
-ValidTestModel.push(new TestData("fail",-0,"",422))
+ValidTestModel.push(new TestData("ok",-0,"zero",200))
 ValidTestModel.push(new TestData("ok",0,"zero",200))
 ValidTestModel.push(new TestData("ok",1,"one",200))
 ValidTestModel.push(new TestData("ok",10,"ten",200))
@@ -50,7 +50,7 @@ ValidTestModel.forEach(aData =>{
         it('Non secure test ', function (done) {
             
             request(app)
-                .get('/num_to_english?number='+aData.number)
+                .get('/num_to_english?number='+aData.number.toString())
                 .set('Accept', 'application/json')
                 .expect('Content-Type', /json/)
                 .expect(aData.httpCode,{
