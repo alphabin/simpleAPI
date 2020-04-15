@@ -57,7 +57,7 @@ Make sure to install Node.JS & npm
 
 RestAPI routes are defined here
 
-[GETRoutes](https://github.com/alphabin/simpleAPI/blob/master/server/routes/appRoutes.js)
+[GET Routes](https://github.com/alphabin/simpleAPI/blob/master/server/routes/appRoutes.js)
 
 Routes controller are defined here
 
@@ -65,7 +65,7 @@ Routes controller are defined here
 
 Helper Class of `NumberConver` does the heavy lifiting for logic
 
-[NumberConverter](https://github.com/alphabin/simpleAPI/blob/master/server/controller/utility/utility.js)
+[Number Converter](https://github.com/alphabin/simpleAPI/blob/master/server/controller/utility/utility.js)
 
 ## Run tests
      npm run test
@@ -73,7 +73,8 @@ Helper Class of `NumberConver` does the heavy lifiting for logic
 These tests are located in
 
     server/tests/apiTest.js
-    [a link](https://github.com/alphabin/simpleAPI/blob/master/server/tests/apiTest.js)
+
+[Api Tests](https://github.com/alphabin/simpleAPI/blob/master/server/tests/apiTest.js)
 
 Example Results as such
 
@@ -204,7 +205,7 @@ The workflow of the CI/CD pipeline is defined
 
 Visit to see all the jobs so far and status, this dashboard is critical for automation of the app 
 
-[CI/CDDashboard](https://github.com/alphabin/simpleAPI/actions?query=workflow%3A%22Node+Github+CI%22)
+[CI/CD Dashboard](https://github.com/alphabin/simpleAPI/actions?query=workflow%3A%22Node+Github+CI%22)
 
 Triggers the test cases and if all the test cases pass, then pushes the latest code to our production simpleAPI site and Deploys it
     
