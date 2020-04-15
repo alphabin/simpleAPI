@@ -142,3 +142,9 @@ Example Response
 
 ## CI / CD Pipeline
 
+When a merge request is absorbed into masterm Github actions triggers test cases and then pushes the latest code to
+    192.199.85.83
+
+Example request on Prod
+    http://192.199.85.83:3000/num_to_english_secure?number=100\&apiKey=12345
+    http://192.199.85.83:3000/num_to_english?number=1
