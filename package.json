@@ -1,0 +1,26 @@
+{
+  "name": "simpleapi",
+  "version": "1.0.0",
+  "description": "Get request handling",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha server/tests/apiTest.js",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphabin/simpleAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alphabin/simpleAPI/issues"
+  },
+  "homepage": "https://github.com/alphabin/simpleAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mocha": "^7.1.1",
+    "supertest": "^4.0.2"
+  }
+}
