@@ -48,7 +48,7 @@ function GetSecureEnglish(req,res)
 {
     res.set('Content-Type', 'application/json');
 
-    var number = new Number(req.query.number)
+    var number = parseFloat(req.query.number)
     var apiKey = req.query.apiKey
 
     if(numberHelper.isValidInput(number) && validateApiKey(apiKey))
