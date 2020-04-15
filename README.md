@@ -1,25 +1,76 @@
  
 # Limitations
 
-MAX / MIN 999999999999999 
+    MAX / MIN 999999999999999 
 
-Handles negative numbers
+    Handles negative numbers
 
-Handles decimals(floats) and intergers
+    Handles decimals(floats) and intergers
 
 # Important Dev Pre-req
 
 Make sure to install Node.JS & npm
 
-# For Developers 
+# For Developers
+
 ## Install NPM packages and deps
      npm install
-     
+
+## Node Packages used 
+
+    "express":  Our Server
+
+    "mocha": Test framework
+
+    "supertest": Test framework
+
+
+```
+    {
+    "name": "simpleapi",
+    "version": "1.0.0",
+    "description": "Get request handling",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha server/tests/apiTest.js --exit",
+        "start": "node server/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alphabin/simpleAPI.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/alphabin/simpleAPI/issues"
+    },
+    "homepage": "",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "mocha": "^7.1.1",
+        "supertest": "^4.0.2"
+    }
+    }
+```
+## RestAPI Routes
+
+RestAPI routes are defined here
+[GETRoutes](https://github.com/alphabin/simpleAPI/blob/master/server/routes/appRoutes.js)
+
+Routes controller are defined here
+[Controllers](https://github.com/alphabin/simpleAPI/blob/master/server/controller/apiController.js)
+
+Helper Class of `NumberConver` does the heavy lifiting for logic
+[NumberConverter](https://github.com/alphabin/simpleAPI/blob/master/server/controller/utility/utility.js
+
 ## Run tests
      npm run test
 
 These tests are located in
+
     server/tests/apiTest.js
+    [a link](https://github.com/alphabin/simpleAPI/blob/master/server/tests/apiTest.js)
 
 Example Results as such
 
@@ -142,9 +193,24 @@ Example Response
 
 ## CI / CD Pipeline
 
-When a merge request is absorbed into masterm Github actions triggers test cases and then pushes the latest code to
-    192.199.85.83
+When a merge request is completed into master Github actions
 
-Example request on Prod
-    http://192.199.85.83:3000/num_to_english_secure?number=100\&apiKey=12345
-    http://192.199.85.83:3000/num_to_english?number=1
+Visit to see all the jobs so far and status, this dashboard is critical for automation of the app 
+
+    [CI/CD Dashboard](https://github.com/alphabin/simpleAPI/actions?query=workflow%3A%22Node+Github+CI%22)
+
+Triggers the test cases and if all the test cases pass, then pushes the latest code to our production simpleAPI site and Deploys it
+    
+    198.199.85.83
+
+Example request on Prod on a Browser
+
+    http://198.199.85.83:3000/num_to_english?number=1
+
+    http://198.199.85.83:3000/num_to_english_secure?number=100\&apiKey=12345
+
+Example request through CURL
+
+    curl -i -H 'Accept: application/json' http://198.199.85.83:3000/num_to_english?number=100
+
+    curl -sS -i -H 'Accept: application/json'   http://198.199.85.83:3000/num_to_english_secure?number=100\&apiKey=12345
