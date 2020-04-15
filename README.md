@@ -56,13 +56,16 @@ Make sure to install Node.JS & npm
 ## RestAPI Routes
 
 RestAPI routes are defined here
+
 [GETRoutes](https://github.com/alphabin/simpleAPI/blob/master/server/routes/appRoutes.js)
 
 Routes controller are defined here
+
 [Controllers](https://github.com/alphabin/simpleAPI/blob/master/server/controller/apiController.js)
 
 Helper Class of `NumberConver` does the heavy lifiting for logic
-[NumberConverter](https://github.com/alphabin/simpleAPI/blob/master/server/controller/utility/utility.js
+
+[NumberConverter](https://github.com/alphabin/simpleAPI/blob/master/server/controller/utility/utility.js)
 
 ## Run tests
      npm run test
@@ -195,9 +198,13 @@ Example Response
 
 When a merge request is completed into master Github actions
 
+The workflow of the CI/CD pipeline is defined
+
+[CI/CD Script](https://github.com/alphabin/simpleAPI/blob/master/.github/workflows/nodejs.yml)
+
 Visit to see all the jobs so far and status, this dashboard is critical for automation of the app 
 
-    [CI/CD Dashboard](https://github.com/alphabin/simpleAPI/actions?query=workflow%3A%22Node+Github+CI%22)
+[CI/CDDashboard](https://github.com/alphabin/simpleAPI/actions?query=workflow%3A%22Node+Github+CI%22)
 
 Triggers the test cases and if all the test cases pass, then pushes the latest code to our production simpleAPI site and Deploys it
     
