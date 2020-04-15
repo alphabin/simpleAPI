@@ -201,10 +201,16 @@ Visit to see all the jobs so far and status, this dashboard is critical for auto
 
 Triggers the test cases and if all the test cases pass, then pushes the latest code to our production simpleAPI site and Deploys it
     
-    192.199.85.83
+    198.199.85.83
 
-Example request on Prod
+Example request on Prod on a Browser
 
-    http://192.199.85.83:3000/num_to_english?number=1
+    http://198.199.85.83:3000/num_to_english?number=1
 
-    http://192.199.85.83:3000/num_to_english_secure?number=100\&apiKey=12345
+    http://198.199.85.83:3000/num_to_english_secure?number=100\&apiKey=12345
+
+Example request through CURL
+
+    curl -i -H 'Accept: application/json' http://198.199.85.83:3000/num_to_english?number=100
+
+    curl -sS -i -H 'Accept: application/json'   http://198.199.85.83:3000/num_to_english_secure?number=100\&apiKey=12345
